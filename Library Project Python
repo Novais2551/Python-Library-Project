@@ -1,0 +1,168 @@
+lista = []
+livro1 = {
+    'Nome': 'Eu sempre morro',
+    'Autor': 'Kaio Bruno Dias',
+    'Genêro': 'Poesia',
+    'Idioma': 'Português',
+    'Editora': 'Devir, poesia e prosa',
+    'ISBN': '978-65-981221-6-4',
+    'Valor': '44$',
+    'Quantidade Disponível': 21
+}
+livro2 = {
+    'Nome': 'Para todas as pessoas intensas',
+    'Autor': 'Iandê Alburquergue',
+    'Genêro': 'Poesia',
+    'idioma': 'Português',
+    'Editora': 'Outro Planeta',
+    'ISBN': '978-85-422155-4-0',
+    'Quantidade Disponível': 40
+}
+livro3 = {
+    'Nome': 'Textos Crueis demais para serem lidos rapidamente',
+    'Autor': 'Igor Paulista',
+    'Genêro': 'Poesia',
+    'idioma': 'Português',
+    'Editora': 'Alt',
+    'ISBN': ' 978-85-250653-6-0',
+    'Quantidade Disponível': 78
+}
+inform = {}
+livroC = {}
+print('Bem vindo a VBook Store! \N{grinning face}')
+print('Somos uma loja de livros virtual \N{smiling face with sunglasses}')
+print('O serviços disponíveis que temos são: ')
+str1 = input('Pesquisar livro já existente no estoque, cadastrar livro (Digite (Cadastrar)) ou devolver um livro (Digite (Devolver)):   ')
+if str1 == livro1['Nome']:
+    print(livro1)
+    print('Informações do livro')
+    str2 = input('Deseja fazer e emprestimo do livro?\N{grinning face} ')
+    if str2 == 'Sim':
+        qd = livro1['Quantidade Disponível']
+        print(f'Temos disponível {qd}')
+        finish = input('Confirmar emprestimo?')
+        if finish == 'Sim':
+            inform['Nome'] = input('Digite seu nome: ')
+            inform['Sobrenome'] = input('Digite seu sobrenome: ')
+            inform['Número de telefone'] = input('Digite seu número de celular: ')
+            print(f'Emprestimo realizado com sucesso Sr. {inform["Nome"]}!')
+            lista.append(inform)
+            finish2 = input('Deseja fazer outro emprestimo? ')
+            if finish2 == "Sim":
+                str3 = input('Qual livro? ')
+                if str3 == livro1['Nome'] or livro2['Nome'] or livro3['Nome']:
+                    print(inform)
+                    inf = input('Realocar informações?')
+                    if inf == 'Sim':
+                        inform['Nome'] = input('Digite seu nome: ')
+                        inform['Sobrenome'] = input('Digite seu sobrenome: ')
+                        inform['Número de telefone'] = input('Digite seu número de celular: ')
+                        lista.append(inform)
+                        con2 = input('Confirmar?')
+                        if con2 == 'Sim':
+                            print('Emprestimo realizado!')
+                        else:
+                            print('Emprestimo Cancelado!!')
+                    else:
+                        print('Emprestimo Realizado!')
+                else:
+                    print('Não encontrado!')
+            else:
+                print('Volte sempre')
+        else:
+            print('Emprestimo cancelado!!')
+elif str1 == livro2['Nome']:
+    print(livro2)
+    print('Informações do livro')
+    str2 = input('Deseja fazer emprestimo do livro?\N{grinning face} ')
+    if str2 == 'Sim':
+        qd = livro2['Quantidade Disponível']
+        print(f'Temos disponivel {qd}')
+        finish = input('Confirmar emprestimo? ')
+        if finish == 'Sim':
+            inform['Nome'] = input('Digite seu nome: ')
+            inform['Sobrenome'] = input('Digite seu sobrenome: ')
+            inform['Número de telefone'] = input('Digite seu número de celular: ')
+            print(f'Emprestimo realizado com sucesso Sr. {inform["Nome"]}!')
+            lista.append(inform)
+            finish2 = input('Deseja fazer outro emprestimo? ')
+            if finish2 == "Sim":
+                str3 = input('Qual livro? ')
+                if str3 == livro1['Nome'] or livro2['Nome'] or livro3['Nome']:
+                    print(inform)
+                    inf = input('Realocar informações?')
+                    if inf == 'Sim':
+                        inform['Nome'] = input('Digite seu nome: ')
+                        inform['Sobrenome'] = input('Digite seu sobrenome: ')
+                        inform['Número de telefone'] = input('Digite seu número de celular: ')
+                        lista.append(inform)
+                        con2 = input('Confirmar?')
+                        if con2 == 'Sim':
+                            print('Emprestimo realizado!')
+                        else:
+                            print('Emprestimo Cancelado!!')
+                    else:
+                        print('Emprestimo Realizado!')
+                else:
+                    print('Não encontrado!')
+            else:
+                print('Volte sempre')
+
+        else:
+            print('Emprestimo cancelado')
+elif str1 == livro3['Nome']:
+    print(livro3)
+    print('Informações do livro')
+    str2 = input('Deseja fazer emprestimo do livro?\N{grinning face} ')
+    if str2 == 'Sim':
+        qd = livro3['Quantidade Disponível']
+        print(f'Quantidade disponivel {qd}')
+        finish = input('Confirmar emprestimo? ')
+        if finish == 'Sim':
+            inform['Nome'] = input('Digite seu nome: ')
+            inform['Sobrenome'] = input('Digite seu sobrenome: ')
+            inform['Número de telefone'] = input('Digite seu número de celular: ')
+            print(f'Emprestimo realizado com sucesso Sr. {inform["Nome"]}!')
+            lista.append(inform)
+            finish2 = input('Deseja fazer outro emprestimo de livro?')
+            if finish2 == "Sim":
+                str3 = input('Qual livro? ')
+                if str3 == livro1['Nome'] or livro2['Nome'] or livro3['Nome']:
+                    print(inform)
+                    inf = input('Realocar informações?')
+                    print('Ok')
+                    if inf == 'Sim':
+                        inform['Nome'] = input('Digite seu nome: ')
+                        inform['Sobrenome'] = input('Digite seu sobrenome: ')
+                        inform['Número de telefone'] = input('Digite seu número de celular: ')
+                        lista.append(inform)
+                        con2 = input('Confirmar?')
+                        if con2 == 'Sim':
+                            print('Emprestimo realizado!')
+                        else:
+                            print('Emprestimo Cancelado!!')
+                    else:
+                        print('Emprestimo Realizado!')
+                else:
+                    print('Não encontrado!')
+            else:
+                print('Volte sempre')
+        else:
+            print('Emprestimo Cancelado!!')
+elif str1 == 'Cadastrar':
+    livroC['Nome'] = input('Digite o nome do livro: ')
+    livroC['Autor'] = input('Nome do autor: ')
+    livroC['Genêro'] = input('Genêro do livro: ')
+    livroC['Idioma'] = input('O idioma do livro: ')
+    livroC['Editora'] = input('Editora do livro: ')
+    livroC['ISBN'] = input('O ISBN do livro: ')
+    print(livroC)
+    print('Livro cadastrado!')
+elif str1 == 'Devolver':
+    devol = input('Nome do livro: ')
+    if devol == livro1['Nome'] or livro2['Nome'] or livro3['Nome']:
+        print('Livro devolvido com sucesso!\N{grinning face}')
+    else:
+        print('Devolução Cancelada!!')
+else:
+    print('Livro não encontrado!')
